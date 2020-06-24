@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<TabPane fx:id="appTabPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.boxer.server.MainController">
+   <tabs>
+      <Tab fx:id="boxerServerTab" closable="false" text="BoxerServer">
+         <content>
+            <AnchorPane minHeight="600.0" minWidth="600.0" prefHeight="730.0" prefWidth="853.0">
+               <children>
+                  <TreeView fx:id="fileTreeView" layoutX="26.0" layoutY="128.0" prefHeight="436.0" prefWidth="500.0" AnchorPane.bottomAnchor="166.0" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="327.0" AnchorPane.topAnchor="128.0" />
+                  <TextArea fx:id="logTA" editable="false" layoutX="15.0" layoutY="498.0" prefHeight="132.0" prefWidth="970.0" wrapText="true" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+                  <ImageView fitHeight="95.0" fitWidth="104.0" layoutX="26.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/server.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="609.0" layoutY="80.0" prefHeight="25.0" prefWidth="170.0" text="Active Users List:">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <ListView fx:id="userListView" layoutX="558.0" layoutY="129.0" prefHeight="435.0" prefWidth="271.0" />
+                  <Label alignment="CENTER" layoutX="191.0" layoutY="80.0" prefHeight="25.0" prefWidth="170.0" text="UsersBox:" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab fx:id="aboutTab" closable="false" text="About">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="33.0" layoutY="188.0" prefHeight="24.0" text="Boxer - universal filebox &amp; sharing" AnchorPane.leftAnchor="33.0" AnchorPane.topAnchor="188.0">
+                     <effect>
+                        <Bloom />
+                     </effect>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font></Label>
+                  <ImageView fitHeight="151.0" fitWidth="153.0" layoutX="55.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/server.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="33.0" layoutY="230.0" prefHeight="24.0" text="Copyright © by kylevessPL 2020. ">
+                     <effect>
+                        <Bloom />
+                     </effect>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="33.0" layoutY="262.0" prefHeight="24.0" text="All rights reserved.">
+                     <effect>
+                        <Bloom />
+                     </effect>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="33.0" layoutY="321.0" prefHeight="24.0" text="Contact info:">
+                     <effect>
+                        <Bloom />
+                     </effect>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="33.0" layoutY="360.0" prefHeight="24.0" text="Kacper Piasta">
+                     <effect>
+                        <Bloom />
+                     </effect>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="33.0" layoutY="394.0" prefHeight="24.0" text="e-mail: 222537@edu.p.lodz.pl">
+                     <effect>
+                        <Bloom />
+                     </effect>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+   </tabs>
+</TabPane>

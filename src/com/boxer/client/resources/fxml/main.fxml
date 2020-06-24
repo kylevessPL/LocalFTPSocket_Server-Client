@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<TabPane fx:id="appTabPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.boxer.client.MainController">
+   <tabs>
+      <Tab fx:id="myBoxerTab" closable="false" text="MyBoxer">
+         <content>
+            <AnchorPane minHeight="600.0" minWidth="600.0" prefHeight="649.0" prefWidth="1000.0">
+               <children>
+                  <TreeView fx:id="fileTreeView" layoutX="254.0" layoutY="32.0" prefHeight="395.0" prefWidth="439.0" AnchorPane.bottomAnchor="224.0" AnchorPane.leftAnchor="254.0" AnchorPane.rightAnchor="307.0" AnchorPane.topAnchor="30.0" />
+                  <TextField fx:id="usernameTF" layoutX="50.0" layoutY="156.0" prefWidth="170.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="156.0" />
+                  <Label layoutX="50.0" layoutY="131.0" prefHeight="25.0" prefWidth="170.0" text="Username:" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="131.0">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="loginBT" layoutX="50.0" layoutY="250.0" mnemonicParsing="false" onAction="#loginBT_OnAction" prefHeight="28.0" prefWidth="170.0" text="Login" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="250.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="localDirBT" layoutX="50.0" layoutY="208.0" mnemonicParsing="false" onAction="#localDirBT_OnAction" prefHeight="28.0" prefWidth="170.0" text="Local Directory" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="208.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="localDirLB" alignment="TOP_LEFT" layoutX="254.0" layoutY="469.0" prefHeight="24.0" prefWidth="394.0" text="Select a local directory..." wrapText="true" AnchorPane.bottomAnchor="156.0" AnchorPane.leftAnchor="254.0" AnchorPane.rightAnchor="352.0" />
+                  <Label layoutX="254.0" layoutY="439.0" prefHeight="24.0" prefWidth="147.0" text="User Directory:" AnchorPane.bottomAnchor="186.0" AnchorPane.leftAnchor="254.0">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="logTA" editable="false" layoutX="15.0" layoutY="498.0" prefHeight="132.0" prefWidth="970.0" wrapText="true" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+                  <ImageView fitHeight="106.0" fitWidth="114.0" layoutX="82.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/client.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="723.0" layoutY="30.0" prefHeight="25.0" prefWidth="170.0" text="Active Users List:">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="chooseFileBT" layoutX="50.0" layoutY="308.0" mnemonicParsing="false" onAction="#chooseFileBT_OnAction" prefHeight="28.0" prefWidth="170.0" text="Share File...">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <ChoiceBox fx:id="chooseUserCB" layoutX="50.0" layoutY="388.0" prefHeight="31.0" prefWidth="170.0" />
+                  <Button fx:id="shareFileBT" defaultButton="true" layoutX="50.0" layoutY="433.0" mnemonicParsing="false" onAction="#shareFileBT_OnAction" prefHeight="60.0" prefWidth="170.0" text="Share">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <ListView fx:id="userListView" layoutX="723.0" layoutY="56.0" prefHeight="368.0" prefWidth="250.0" />
+                  <Button fx:id="openDirBT" layoutX="537.0" layoutY="439.0" mnemonicParsing="false" onAction="#openDirBT_OnAction" prefHeight="52.0" prefWidth="156.0" text="Open Directory" />
+                  <Label fx:id="shareFileLB" alignment="TOP_LEFT" layoutX="50.0" layoutY="349.0" prefHeight="24.0" prefWidth="204.0" text="No file selected" wrapText="true" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab fx:id="aboutTab" closable="false" text="About">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="33.0" layoutY="188.0" prefHeight="24.0" text="Boxer - universal filebox &amp; sharing" AnchorPane.leftAnchor="33.0" AnchorPane.topAnchor="188.0">
+                     <effect>
+                        <Bloom />
+                     </effect>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font></Label>
+                  <ImageView fitHeight="151.0" fitWidth="153.0" layoutX="55.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/client.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="33.0" layoutY="230.0" prefHeight="24.0" text="Copyright © by kylevessPL 2020. ">
+                     <effect>
+                        <Bloom />
+                     </effect>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="33.0" layoutY="262.0" prefHeight="24.0" text="All rights reserved.">
+                     <effect>
+                        <Bloom />
+                     </effect>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="33.0" layoutY="321.0" prefHeight="24.0" text="Contact info:">
+                     <effect>
+                        <Bloom />
+                     </effect>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="33.0" layoutY="360.0" prefHeight="24.0" text="Kacper Piasta">
+                     <effect>
+                        <Bloom />
+                     </effect>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="33.0" layoutY="394.0" prefHeight="24.0" text="e-mail: 222537@edu.p.lodz.pl">
+                     <effect>
+                        <Bloom />
+                     </effect>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+   </tabs>
+</TabPane>
